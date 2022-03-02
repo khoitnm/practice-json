@@ -1,12 +1,16 @@
-package org.tnmk.practicejson.pro01jsondynamictype.common.test;
+package org.tnmk.practicejson.pro01jsondynamictype.common;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class JsonHelper {
-  private static final ObjectMapper objectMapper = new ObjectMapper();
+  private final ObjectMapper objectMapper;
 
-  public static String toJson(Object object) {
+  public String toJson(Object object) {
     try {
       return objectMapper.writeValueAsString(object);
     } catch (JsonProcessingException e) {
@@ -14,7 +18,7 @@ public class JsonHelper {
     }
   }
 
-  public static <T> T toObject(String jsonString, Class<T> resultClass) {
+  public <T> T toObject(String jsonString, Class<T> resultClass) {
     try {
       return objectMapper.readValue(jsonString, resultClass);
     } catch (JsonProcessingException e) {

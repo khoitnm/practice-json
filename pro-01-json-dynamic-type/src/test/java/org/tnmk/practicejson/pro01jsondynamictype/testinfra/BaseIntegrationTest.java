@@ -1,4 +1,4 @@
-package org.tnmk.practicejson.pro01jsondynamictype.common.test;
+package org.tnmk.practicejson.pro01jsondynamictype.testinfra;
 
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;

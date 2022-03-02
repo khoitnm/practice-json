@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor // for Json conversion.
 @AllArgsConstructor
-public class Parent {
-  private Object child;
+public class ChildA {
+  private String fullName;
 }
