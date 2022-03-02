@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor // for Json conversion.
 @AllArgsConstructor
 public class Parent {
-  private Object child;
+  private Child child;
 }

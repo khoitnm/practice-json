@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor // for Json conversion.
 @AllArgsConstructor
-public class ChildA {
+public class ChildA implements Child {
   private String fullName;
 }
