@@ -23,6 +23,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- TEST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -78,18 +84,27 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.10.0</version>
                 <configuration>
                     <release>${java.version}</release>
+
+                    <!--
+                    See https://issues.apache.org/jira/browse/MCOMPILER-346 for a description and resolution of the problem
+                    -->
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                    <annotationProcessors>
+                        <annotationProcessor>lombok.launch.AnnotationProcessorHider$AnnotationProcessor</annotationProcessor>
+                    </annotationProcessors>
                 </configuration>
+
             </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.0.0-M5</version>
                 <configuration>
-<!--                    <redirectTestOutputToFile>true</redirectTestOutputToFile>-->
+                    <!--                    <redirectTestOutputToFile>true</redirectTestOutputToFile>-->
                 </configuration>
             </plugin>
         </plugins>
