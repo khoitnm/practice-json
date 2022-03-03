@@ -1,11 +1,10 @@
-package org.tnmk.practicejson.pro01jsondynamictype.common;
+package org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_class;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.tnmk.practicejson.pro01jsondynamictype.item.model.ChildA;
-import org.tnmk.practicejson.pro01jsondynamictype.item.model.Parent;
+import org.tnmk.practicejson.pro01jsondynamictype.common.JsonHelper;
 import org.tnmk.practicejson.pro01jsondynamictype.testinfra.BaseIntegrationTest;
 
 @Slf4j
