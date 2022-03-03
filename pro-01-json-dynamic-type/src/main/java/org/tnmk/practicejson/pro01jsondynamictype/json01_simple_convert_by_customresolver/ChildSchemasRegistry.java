@@ -1,4 +1,4 @@
-package org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver;
+package org.tnmk.practicejson.pro01jsondynamictype.json01_simple_convert_by_customresolver;
 
 import java.util.Collections;
 import java.util.HashMap;

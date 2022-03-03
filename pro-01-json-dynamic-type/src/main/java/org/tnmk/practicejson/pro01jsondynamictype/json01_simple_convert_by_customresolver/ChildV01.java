@@ -1,9 +1,8 @@
-package org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver;
+package org.tnmk.practicejson.pro01jsondynamictype.json01_simple_convert_by_customresolver;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver.Child;
 
 @Data
 @NoArgsConstructor // for Json conversion.

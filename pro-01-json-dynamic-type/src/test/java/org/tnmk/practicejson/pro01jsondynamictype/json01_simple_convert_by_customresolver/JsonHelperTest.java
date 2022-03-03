@@ -1,4 +1,4 @@
-package org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver;
+package org.tnmk.practicejson.pro01jsondynamictype.json01_simple_convert_by_customresolver;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;

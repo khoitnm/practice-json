@@ -1,4 +1,4 @@
-package org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_class;
+package org.tnmk.practicejson.pro01jsondynamictype.json00_simple_convert_by_class;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
