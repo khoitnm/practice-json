@@ -15,7 +15,7 @@ public class JsonHelperTest extends BaseIntegrationTest {
   @Test
   public void test() {
     ChildV01 child = new ChildV01("child01" + System.nanoTime());
-    Parent originalParent = new Parent(ChildVersionsMap.V01, child);
+    Parent originalParent = new Parent(ChildSchemasRegistry.V01, child);
 
     String jsonString = jsonHelper.toJson(originalParent);
     log.info("Json: \n{}", jsonString);

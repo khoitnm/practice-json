@@ -11,7 +11,7 @@ import org.springframework.beans.BeanUtils;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 
-import static org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver.ChildVersionsMap.childClassesMapByVersion;
+import static org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_customresolver.ChildSchemasRegistry.childClassesMapByVersion;
 
 @Slf4j
 public class ParentWithChildResolver implements TypeIdResolver {

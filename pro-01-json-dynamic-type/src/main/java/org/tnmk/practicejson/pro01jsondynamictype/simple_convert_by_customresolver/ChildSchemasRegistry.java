@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ChildVersionsMap {
+public class ChildSchemasRegistry {
   public static final String V01 = "1.0.0";
   public static final String V02 = "2.0.0";
   public static final Map<String, Class> childClassesMapByVersion = Collections.unmodifiableMap(construct());
