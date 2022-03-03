@@ -15,16 +15,12 @@ import static org.tnmk.practicejson.pro01jsondynamictype.simple_convert_by_custo
 
 @Slf4j
 public class ParentWithChildResolver implements TypeIdResolver {
-  //
+  // Should find a way to inject it.
   private final TypeFactory typeFactory = TypeFactory.defaultInstance();
 
   private JavaType parentType;
   private String versionFieldName = "childVersion";
   private String versionValue;
-
-  //  public ParentWithChildResolver(TypeFactory typeFactory) {
-  //    this.typeFactory = typeFactory;
-  //  }
 
   @Override public void init(JavaType javaType) {
     log.info("init({})", javaType);
@@ -44,13 +40,12 @@ public class ParentWithChildResolver implements TypeIdResolver {
   }
 
   @Override public String idFromValueAndType(Object o, Class<?> aClass) {
-    log.info("idFromValueAndType({}, {})", o, aClass);
-    return "idFromValueAndType";
+    throw new UnsupportedOperationException("idFromValueAndType(" + o + ", " + aClass + ")");
+
   }
 
   @Override public String idFromBaseType() {
-    log.info("idFromBaseType()");
-    return "idFromBaseType";
+    throw new UnsupportedOperationException("idFromBaseType");
   }
 
   @Override public JavaType typeFromId(DatabindContext databindContext, String id) throws IOException {
@@ -62,8 +57,7 @@ public class ParentWithChildResolver implements TypeIdResolver {
   }
 
   @Override public String getDescForKnownTypeIds() {
-    log.info("getDescForKnownTypeIds()");
-    return "getDescForKnownTypeIds";
+    throw new UnsupportedOperationException("getDescForKnownTypeIds");
   }
 
   @Override public JsonTypeInfo.Id getMechanism() {

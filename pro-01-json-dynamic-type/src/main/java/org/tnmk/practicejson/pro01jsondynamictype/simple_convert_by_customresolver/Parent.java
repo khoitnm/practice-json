@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
     use = JsonTypeInfo.Id.CUSTOM
     , include = JsonTypeInfo.As.EXISTING_PROPERTY
     , property = "childVersion"
-    , visible = false
+    , visible = true // this will help deserialize process to set value into "childVersion" field. Otherwise, that field will be null.
 )
 @JsonTypeIdResolver(ParentWithChildResolver.class)
 @Data
