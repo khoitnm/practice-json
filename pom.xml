@@ -10,6 +10,7 @@
 
     <modules>
         <module>pro-01-json-dynamic-type</module>
+        <module>pro-02-dynamic-message-schema-be</module>
     </modules>
 
     <properties>
