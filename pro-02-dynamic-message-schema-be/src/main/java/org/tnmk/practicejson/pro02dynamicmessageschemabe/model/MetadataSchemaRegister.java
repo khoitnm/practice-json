@@ -10,11 +10,15 @@ import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.LeaveConv
 public enum MetadataSchemaRegister {
   USER_MESSAGE_V01(MessageType.USER, null, "0.0.1", new TypeReference<MetadataV01<Void>>() {
   }),
+  USER_MESSAGE_V02(MessageType.USER, null, "0.0.2", new TypeReference<MetadataV02<Void>>() {
+  }),
   JOIN_CONVERSATION_V01(MessageType.SYSTEM, DetailType.JOIN_CONVERSATION, "0.0.1", new TypeReference<MetadataV01<JoinConversationV01>>() {
   }),
   LEAVE_CONVERSATION_V01(MessageType.SYSTEM, DetailType.LEAVE_CONVERSATION, "0.0.1", new TypeReference<MetadataV01<LeaveConversationV01>>() {
   }),
   LEAVE_CONVERSATION_V02(MessageType.SYSTEM, DetailType.LEAVE_CONVERSATION, "0.0.2", new TypeReference<MetadataV01<LeaveConversationV02>>() {
+  }),
+  LEAVE_CONVERSATION_V03(MessageType.SYSTEM, DetailType.LEAVE_CONVERSATION, "0.0.3", new TypeReference<MetadataV02<LeaveConversationV02>>() {
   });
 
   private final MessageType messageType;
