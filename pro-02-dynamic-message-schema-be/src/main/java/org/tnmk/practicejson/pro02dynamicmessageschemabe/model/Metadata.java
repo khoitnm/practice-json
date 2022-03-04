@@ -11,9 +11,17 @@ import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 public interface Metadata<D> {
   MessageType getMessageType();
 
-  String getVersionNumber();
+  void setMessageType(MessageType messageType);
 
   DetailType getDetailType();
 
+  void setDetailType(DetailType detailType);
+
+  String getVersionNumber();
+
+  void setVersionNumber(String versionNumber);
+
   D getDetailData();
+
+  void setDetailData(D detailData);
 }

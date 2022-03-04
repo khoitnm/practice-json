@@ -5,9 +5,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.tnmk.practicejson.pro02dynamicmessageschemabe.common.JsonHelper;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.JoinConversationV01;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.LeaveConversationV01;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.LeaveConversationV02;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.JoinConversationV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.LeaveConversationV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.LeaveConversationV02;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.MetadataV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.MetadataV02;
 import org.tnmk.practicejson.pro02dynamicmessageschemabe.testinfra.BaseIntegrationTest;
 
 import java.util.Arrays;

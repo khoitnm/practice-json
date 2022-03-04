@@ -1,4 +1,4 @@
-package org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details;
+package org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -2,9 +2,11 @@ package org.tnmk.practicejson.pro02dynamicmessageschemabe.model;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.Getter;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.JoinConversationV01;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.LeaveConversationV01;
-import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.details.LeaveConversationV02;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.JoinConversationV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.LeaveConversationV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.detailschemas.LeaveConversationV02;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.MetadataV01;
+import org.tnmk.practicejson.pro02dynamicmessageschemabe.model.metadataschemas.MetadataV02;
 
 @Getter
 public enum MetadataSchemaRegister {
