@@ -3,11 +3,10 @@ package org.tnmk.practicejson.pro01jsondynamictype.json00_simple_convert_by_clas
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.tnmk.practicejson.pro01jsondynamictype.json01_simple_convert_by_customresolver.Child;
 
 @Data
 @NoArgsConstructor // for Json conversion.
 @AllArgsConstructor
-public class Parent {
-  private Child child;
+public class Json00Parent {
+  private Json00Child child;
 }

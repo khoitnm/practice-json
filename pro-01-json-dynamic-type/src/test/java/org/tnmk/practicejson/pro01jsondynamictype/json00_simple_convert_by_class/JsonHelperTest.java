@@ -14,13 +14,13 @@ public class JsonHelperTest extends BaseIntegrationTest {
 
   @Test
   public void test() {
-    ChildA child = new ChildA("childA" + System.nanoTime());
-    Parent originalParent = new Parent(child);
+    Json00ChildA child = new Json00ChildA("childA" + System.nanoTime());
+    Json00Parent originalParent = new Json00Parent(child);
 
     String jsonString = jsonHelper.toJson(originalParent);
     log.info("Json: \n{}", jsonString);
 
-    Parent parsedParent = jsonHelper.toObject(jsonString, Parent.class);
-    Assertions.assertEquals(originalParent, parsedParent);
+    Json00Parent parsedJson00Parent = jsonHelper.toObject(jsonString, Json00Parent.class);
+    Assertions.assertEquals(originalParent, parsedJson00Parent);
   }
 }
