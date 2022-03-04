@@ -13,7 +13,7 @@ import lombok.Data;
 public class VersionedMetadata<D> {
   private String versionNumber;
   /**
-   * Its value comes from {@link DetailSchemaRegister}.
+   * Its actually type will be decided by {@link DetailSchemaRegister}.
    */
   private DetailType detailType;
   private D detailData;

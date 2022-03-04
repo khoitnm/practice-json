@@ -10,5 +10,5 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message {
-  private List<VersionedMetadata<?>> listOfVersionedMetadata;
+  private List<MetadataV01<?>> listOfVersionedMetadata;
 }

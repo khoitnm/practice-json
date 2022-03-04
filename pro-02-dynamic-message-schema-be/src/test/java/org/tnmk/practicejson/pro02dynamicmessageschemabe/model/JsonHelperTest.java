@@ -29,31 +29,47 @@ public class JsonHelperTest extends BaseIntegrationTest {
     Assertions.assertEquals(message, parsedObject);
   }
 
-  private List<VersionedMetadata<?>> randomVersionedMetadataList() {
-    return Arrays.asList(null, randomDetail_JoinConversation(), randomDetail_LeaveConversation01(), randomDetail_LeaveConversation02());
+  private List<MetadataV01<?>> randomVersionedMetadataList() {
+    return Arrays.asList(
+        null,
+        random_UserMessage(),
+        randomDetail_JoinConversation(),
+        randomDetail_LeaveConversation01(),
+        randomDetail_LeaveConversation02()
+    );
   }
 
-  private VersionedMetadata<?> randomDetail_JoinConversation() {
-    VersionedMetadata<JoinConversationV01> versionedMetadata = new VersionedMetadata<>();
-    versionedMetadata.setVersionNumber(DetailSchemaRegister.JOIN_CONVERSATION_V01.getVersion());
-    versionedMetadata.setDetailType(DetailSchemaRegister.JOIN_CONVERSATION_V01.getType());
-    versionedMetadata.setDetailData(new JoinConversationV01("author_" + System.nanoTime()));
-    return versionedMetadata;
+  private MetadataV01<?> random_UserMessage() {
+    MetadataV01<JoinConversationV01> metadataV01 = new MetadataV01<>();
+    metadataV01.setMessageType(MessageType.USER);
+    metadataV01.setVersionNumber(MetadataSchemaRegister.USER_MESSAGE_V01.getVersion());
+    return metadataV01;
   }
 
-  private VersionedMetadata<?> randomDetail_LeaveConversation01() {
-    VersionedMetadata<LeaveConversationV01> versionedMetadata = new VersionedMetadata();
-    versionedMetadata.setVersionNumber(DetailSchemaRegister.LEAVE_CONVERSATION_V01.getVersion());
-    versionedMetadata.setDetailType(DetailSchemaRegister.LEAVE_CONVERSATION_V01.getType());
-    versionedMetadata.setDetailData(new LeaveConversationV01("author_" + System.nanoTime()));
-    return versionedMetadata;
+  private MetadataV01<?> randomDetail_JoinConversation() {
+    MetadataV01<JoinConversationV01> metadataV01 = new MetadataV01<>();
+    metadataV01.setMessageType(MessageType.SYSTEM);
+    metadataV01.setVersionNumber(MetadataSchemaRegister.JOIN_CONVERSATION_V01.getVersion());
+    metadataV01.setDetailType(MetadataSchemaRegister.JOIN_CONVERSATION_V01.getDetailType());
+    metadataV01.setDetailData(new JoinConversationV01("author_" + System.nanoTime()));
+    return metadataV01;
   }
 
-  private VersionedMetadata<?> randomDetail_LeaveConversation02() {
-    VersionedMetadata<LeaveConversationV02> versionedMetadata = new VersionedMetadata();
-    versionedMetadata.setVersionNumber(DetailSchemaRegister.LEAVE_CONVERSATION_V02.getVersion());
-    versionedMetadata.setDetailType(DetailSchemaRegister.LEAVE_CONVERSATION_V02.getType());
-    versionedMetadata.setDetailData(new LeaveConversationV02("firstName" + System.nanoTime(), "lastName" + System.nanoTime()));
-    return versionedMetadata;
+  private MetadataV01<?> randomDetail_LeaveConversation01() {
+    MetadataV01<LeaveConversationV01> metadataV01 = new MetadataV01();
+    metadataV01.setMessageType(MessageType.SYSTEM);
+    metadataV01.setVersionNumber(MetadataSchemaRegister.LEAVE_CONVERSATION_V01.getVersion());
+    metadataV01.setDetailType(MetadataSchemaRegister.LEAVE_CONVERSATION_V01.getDetailType());
+    metadataV01.setDetailData(new LeaveConversationV01("author_" + System.nanoTime()));
+    return metadataV01;
+  }
+
+  private MetadataV01<?> randomDetail_LeaveConversation02() {
+    MetadataV01<LeaveConversationV02> metadataV01 = new MetadataV01();
+    metadataV01.setMessageType(MessageType.SYSTEM);
+    metadataV01.setVersionNumber(MetadataSchemaRegister.LEAVE_CONVERSATION_V02.getVersion());
+    metadataV01.setDetailType(MetadataSchemaRegister.LEAVE_CONVERSATION_V02.getDetailType());
+    metadataV01.setDetailData(new LeaveConversationV02("firstName" + System.nanoTime(), "lastName" + System.nanoTime()));
+    return metadataV01;
   }
 }
